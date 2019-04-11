@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/stefanprodan/gitops-helm.svg?branch=master)](https://travis-ci.org/stefanprodan/gitops-helm)
 
-** Peishu's Tips for creating an image pulling secret yaml**
+**Peishu's Tips for creating an image pulling secret yaml**
 ```
 $ cat ~/.docker/config.json > config.json
 
