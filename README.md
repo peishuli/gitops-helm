@@ -97,7 +97,7 @@ Find the SSH public key with:
 ```bash
 kubectl -n flux logs deployment/flux | grep identity.pub | cut -d '"' -f2
 ```
-Alternatively, if you have fluxctl installed, you can get the ssh cert by:
+Alternatively, if you have fluxctl installed, you can get the ssh key by:
 ```
 fluxctl identity --k8s-fwd-ns flux
 ```
