@@ -97,6 +97,10 @@ Find the SSH public key with:
 ```bash
 kubectl -n flux logs deployment/flux | grep identity.pub | cut -d '"' -f2
 ```
+Alternatively, if you have fluxctl installed, you can get the ssh cert by:
+```
+fluxctl identity --k8s-fwd-ns flux
+```
 
 In order to sync your cluster state with Git you need to copy the public key and 
 create a **deploy key** with **write access** on your GitHub repository.
