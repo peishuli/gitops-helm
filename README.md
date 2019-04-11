@@ -79,7 +79,7 @@ Install Weave Flux and its Helm Operator by specifying your fork URL
 helm install --name flux \
 --set rbac.create=true \
 --set helmOperator.create=true \
---set git.url=githttps://gitlab.com/peishu/okd-config \
+--set git.url=git@gitlab.com:peishu/okd-config \
 --namespace flux \
 weaveworks/flux
 ```
