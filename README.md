@@ -2,6 +2,18 @@
 
 [![Build Status](https://travis-ci.org/stefanprodan/gitops-helm.svg?branch=master)](https://travis-ci.org/stefanprodan/gitops-helm)
 
+** Peishu's Tips for creating an image pulling secret yaml**
+```
+$ cat ~/.docker/config.json > config.json
+
+$ kubectl create secret generic gitlab-registry-1 \
+    --from-file=.dockerconfigjson=./config.json \
+    --type=kubernetes.io/dockerconfigjson
+
+$ kubectl get secret gitlab-registry-1 -o yaml --export > gitlab-regisgtry-1.yaml
+
+$ rm config.json
+```
 **What is GitOps?**
 
 GitOps is a way to do Continuous Delivery, it works by using Git as a source of truth for declarative infrastructure and workloads. 
