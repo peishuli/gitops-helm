@@ -120,6 +120,9 @@ create a **deploy key** with **write access** on your GitHub repository.
 Open GitHub, navigate to your fork, go to _Setting > Deploy keys_ click on _Add deploy key_, check 
 _Allow write access_, paste the Flux public key and click _Add key_.
 
+**Peishu's Notes**
+In GitLab, you can access deploy key via Settings -> Repository -> Deploy Keys.
+
 ### GitOps pipeline example
 
 The config repo has the following structure:
