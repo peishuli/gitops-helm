@@ -6,11 +6,11 @@
 ```
 $ cat ~/.docker/config.json > config.json
 
-$ kubectl create secret generic gitlab-registry-1 \
+$ kubectl create secret generic gitlab-registry \
     --from-file=.dockerconfigjson=./config.json \
     --type=kubernetes.io/dockerconfigjson
 
-$ kubectl get secret gitlab-registry-1 -o yaml --export > gitlab-regisgtry-1.yaml
+$ kubectl get secret gitlab-registry -o yaml --export > gitlab-regisgtry.yaml
 
 $ rm config.json
 ```
