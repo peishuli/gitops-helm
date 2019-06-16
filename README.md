@@ -92,9 +92,12 @@ helm install --name flux \
 --set rbac.create=true \
 --set helmOperator.create=true \
 --set git.url=git@gitlab.com:peishu/okd-config \
+--set registry.pollInterval=1m \
+--set helmOperator.chartsSyncInterval=1m \
 --namespace flux \
 weaveworks/flux
 ```
+***Note:*** I added --set registry.pollInterval=1m \ and --set helmOperator.chartsSyncInterval=1m \ lines to overwrite the default pulling and chart synch intervals (defaults 5m and 3m respectively) for DEMOs
 
 The Flux Helm operator provides an extension to Weave Flux that automates Helm Chart releases for it. 
 A Chart release is described through a Kubernetes custom resource named HelmRelease.
